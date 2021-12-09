@@ -1,4 +1,4 @@
-package ca.lar.shopping.shopping.model;
+package ca.guusto.merchant.model;
 
 public enum ShoppingOption {
 	ONLINE,

@@ -1,10 +1,10 @@
-package ca.lar.shopping.shopping;
+package ca.guusto.merchant;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ShoppingApplicationTests {
+class MerchantApplicationTests {
 
 	@Test
 	void contextLoads() {
