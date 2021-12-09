@@ -74,7 +74,6 @@ public class MerchantApplication {
 			sleep= sleep +10; 
 			return models
 					.stream()
-					.parallel()
 					.map(f -> {
 						
 						try {
