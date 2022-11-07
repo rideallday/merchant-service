@@ -1,12 +1,36 @@
-Build a docker image with packer:
+# Build a docker image with packer:
+
+Pre-requisites: 
+* docker desktop installed
 
 `docker build -t merchant .`
+
+# Run in docker
 
 If you haven't already, set up a docker network, so that
 your apps can comminicate by name:
 `docker network crete appnet`
 
-
 Then run:
 
 `docker run -p 8082:8082 --net appnet --name merchant merchant`
+
+# Run in kubernetes with terraform
+
+Pre-requisites: 
+* kubernetes enabled in your docker desktop
+* terraform
+* merchant-service and shopper-service docker images built and available locally
+
+Setup:
+Set your kube config path:
+`export KUBE_CONFIG_PATH=/Users/nic/.kube/config`
+
+Init terraform:
+`terraform init`
+
+Check before deploy:
+`terraform plan`
+
+Deploy:
+`terraform apply`
