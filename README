@@ -2,6 +2,11 @@ Build a docker image with packer:
 
 `docker build -t merchant .`
 
+If you haven't already, set up a docker network, so that
+your apps can comminicate by name:
+`docker network crete appnet`
+
+
 Then run:
 
-`docker run -p 8082:8082 merchant`
+`docker run -p 8082:8082 --net appnet --name merchant merchant`
